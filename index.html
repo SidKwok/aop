@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>aop</title>
+    </head>
+    <body>
+        <script src="dist/aop.js"></script>
+        <script type="text/javascript">
+            var foo = function(str) {
+                console.log('im ' + str);
+            }
+            // var tmp = foo;
+            // foo = function(...args) {
+            //     console.log('yo');
+            //     return tmp.apply(this, args);
+            // }
+            var wrapFoo = new Aop(foo);
+            wrapFoo('foo');
+        </script>
+    </body>
+</html>
